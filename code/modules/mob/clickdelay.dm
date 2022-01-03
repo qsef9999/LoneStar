@@ -175,7 +175,7 @@
 	/// Amount of time to hard-stagger (no clicking at all) the mob when attacking. Lower = better
 	var/attack_unwieldlyness = 0
 	/// This item bypasses any click delay mods
-	var/clickdelay_mod_bypass = FALSE
+	var/clickdelay_mod_bypass = TRUE
 	/// This item checks clickdelay from a user's delayed next action variable rather than the last time they attacked.
 	var/clickdelay_from_next_action = FALSE
 	/// This item ignores next action delays.
