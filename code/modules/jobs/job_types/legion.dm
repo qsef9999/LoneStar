@@ -212,9 +212,9 @@ Weapons		Lever shotgun, Grease gun, Repeater carbines, Revolvers, simple guns al
 	minimal_access = list(ACCESS_LEGION, ACCESS_CHANGE_IDS, ACCESS_LEGION_COMMAND)
 
 	loadout_options = list(
-		/datum/outfit/loadout/palacent,		// M1919, military ripper
-		/datum/outfit/loadout/rangerhunter,	// Hunting revolver, AMR
-		/datum/outfit/loadout/centurion,	// 14mm pistol, Powerfist
+		/datum/outfit/loadout/palacent,		// M1919, Spatha
+		/datum/outfit/loadout/rangerhunter,	// Hunting revolver, AMR, Spatha
+		/datum/outfit/loadout/centurion,	// Riot Shotgun, Military Ripper
 		)
 
 /datum/outfit/job/CaesarsLegion/Legionnaire/f13centurion/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
