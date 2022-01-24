@@ -30,7 +30,7 @@
 /obj/item/grenade/f13/frag
 	name = "frag grenade"
 	desc = "A prewar military-grade fragmentation grenade with short fuse. Useless against hard armor."
-	icon_state = "syndicate"
+	icon_state = "frag_new"
 	throw_speed = 4
 	throw_range = 7
 	ex_dev = 0
@@ -43,7 +43,7 @@
 /obj/item/grenade/f13/plasma
 	name = "plasma grenade"
 	desc = "A prewar military-grade plasma grenade, used for permanent riot suppression pre-war."
-	icon_state = "syndicate"
+	icon_state = "plasma"
 	throw_speed = 4
 	throw_range = 7
 	ex_dev = 0
@@ -64,7 +64,7 @@
 /obj/item/grenade/f13/incendiary
 	name = "incendinary grenade"
 	desc = "A prewar police supression grenade designed to cause as much agony as possible against large crowds of protestors, very hot."
-	icon_state = "syndicate"
+	icon_state = "incendinary"
 	throw_speed = 4
 	throw_range = 7
 	ex_dev = 0
@@ -105,3 +105,13 @@
 	update_mob()
 	playsound(loc, 'sound/effects/empulse.ogg', 50, 1)
 	radiation_pulse(src, rad_damage)
+
+/obj/item/grenade/f13/dynamite
+	name = "stick of dynamite"
+	desc = "I'll hold it down, you light the fuse!"
+	icon = 'icons/fallout/objects/guns/explosives.dmi'
+	icon_state = "dynamite"
+	ex_dev = 0
+	ex_heavy = 2
+	ex_light = 3
+	ex_flame = 0
