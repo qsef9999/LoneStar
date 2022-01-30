@@ -2,7 +2,7 @@
 
 ///////////////////////////////////////////////Alchohol bottles! -Agouri //////////////////////////
 //Functionally identical to regular drinks. The only difference is that the default bottle size is 100. - Darem
-//Bottles now knockdown and break when smashed on people's heads. - Giacom
+//Bottle knockdown is cancer. - Scheveningen
 
 /obj/item/reagent_containers/food/drinks/bottle
 	amount_per_transfer_from_this = 10
@@ -12,7 +12,7 @@
 	item_state = "broken_beer" //Generic held-item sprite until unique ones are made.
 	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'
 	righthand_file = 'icons/mob/inhands/misc/food_righthand.dmi'
-	var/knockdown_duration = 13 //Directly relates to the 'knockdown' duration. Lowered by armor (i.e. helmets)
+	var/knockdown_duration = 0 // Don't change this back, ever.
 	isGlass = TRUE
 	foodtype = ALCOHOL
 
@@ -40,7 +40,6 @@
 			headarmor = I.armor.melee
 
 	//Calculate the knockdown duration for the target.
-	var/armor_duration = (knockdown_duration - headarmor) + force
 
 	//Apply the damage!
 	target.apply_damage(force, BRUTE, affecting, armor_block)
@@ -50,8 +49,8 @@
 	if(affecting == BODY_ZONE_HEAD && iscarbon(target))
 		head_attack_message = " on the head"
 		//Knockdown the target for the duration that we calculated and divide it by 5.
-		if(armor_duration)
-			target.DefaultCombatKnockdown(min(armor_duration, 200)) // Never knockdown more than a flash!
+		//if(armor_duration)
+		//	target.DefaultCombatKnockdown(min(armor_duration, 200)) // What the fuck were tg coders thinking //it's a melee knockdown it's not that strong
 
 	//Display an attack message.
 	if(target != user)
@@ -195,7 +194,7 @@
 	foodtype = NONE
 	force = 18
 	throwforce = 18
-	knockdown_duration = 18
+	knockdown_duration = 0
 
 /obj/item/reagent_containers/food/drinks/bottle/holyoil/empty
 	list_reagents = null
@@ -395,7 +394,7 @@
 
 /obj/item/reagent_containers/food/drinks/bottle/trappist/empty
 	list_reagents = null
-	
+
 /obj/item/reagent_containers/food/drinks/bottle/rotgut
 	name = "Rotgut"
 	desc = "a bottle of noxious homebrewed alcohol, it has the name Rotgut etched on its side"
@@ -404,7 +403,7 @@
 	list_reagents = list(/datum/reagent/consumable/ethanol/rotgut = 100)
 
 /obj/item/reagent_containers/food/drinks/bottle/tequila/empty
-	list_reagents = null	
+	list_reagents = null
 
 //////////////////////////JUICES AND STUFF ///////////////////////
 

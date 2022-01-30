@@ -23,7 +23,7 @@
 /obj/item/ammo_casing/energy/laser/scatter
 	projectile_type = /obj/item/projectile/beam/scatter
 	pellets = 5
-	variance = 35
+	variance = 25
 	select_name = "scatter"
 
 /obj/item/ammo_casing/energy/laser/scatter/disabler
@@ -166,7 +166,11 @@ also: most hitscan weapons have more charge than their normal projectile counter
 /obj/item/ammo_casing/energy/laser/lasgun/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/lasgun/hitscan
 	e_cost = 80 //25 shots, as per FNV
-
+	
+/obj/item/ammo_casing/energy/laser/lasgun/hitscan/focused
+	projectile_type = /obj/item/projectile/beam/laser/lasgun/hitscan/focused
+	e_cost = 400 //5 shots
+	
 /obj/item/ammo_casing/energy/laser/solar
 	projectile_type = /obj/item/projectile/beam/laser/solar
 	e_cost = 30 //basically infinite shots
@@ -184,6 +188,10 @@ also: most hitscan weapons have more charge than their normal projectile counter
 /obj/item/ammo_casing/energy/laser/rcw/hitscan
 	projectile_type = /obj/item/projectile/beam/laser/rcw/hitscan
 	e_cost = 50 //it's actually 24 shots now, as it fires in a burst of 2
+
+/obj/item/ammo_casing/energy/laser/gatling/hitscan
+	projectile_type = /obj/item/projectile/beam/laser/gatling/hitscan
+	e_cost = 10 //it's actually 240 shots now, as it fires in a burst of 5
 
 /obj/item/ammo_casing/energy/laser/laer
 	projectile_type = /obj/item/projectile/beam/laser/laer

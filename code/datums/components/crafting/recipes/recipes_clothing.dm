@@ -70,7 +70,7 @@
 	time = 30
 	category = CAT_CLOTHING
 	subcategory = CAT_BELTS
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/durathread_bandolier
 	name = "Durathread Bandolier"
@@ -80,7 +80,7 @@
 	time = 50
 	category = CAT_CLOTHING
 	subcategory = CAT_BELTS
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/durathread_wintercoat
 	name = "Durathread Winter Coat"
@@ -90,7 +90,7 @@
 	time = 70
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-	always_availible = FALSE
+	always_available = FALSE
 
 /////////
 //SHOES//
@@ -204,7 +204,7 @@
 	subcategory = CAT_GENCLOTHES
 	tools = list(TOOL_WIRECUTTER)
 	time = 20
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/twinsheath
 	name = "Twin Sword Sheath"
@@ -237,7 +237,7 @@
 	reqs = list(/obj/item/organ/tail/lizard = 1)
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/lizardhat_alternate
 	name = "Lizard Cloche Hat"
@@ -246,7 +246,7 @@
 	reqs = list(/obj/item/stack/sheet/animalhide/lizard = 1)
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/kittyears
 	name = "Kitty Ears"
@@ -256,8 +256,19 @@
 				/obj/item/organ/ears/cat = 1)
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-	always_availible = FALSE
+	always_available = FALSE
+*/
 
+/datum/crafting_recipe/papermask	//Citadel item
+	name = "Paper Mask"
+	result = /obj/item/clothing/mask/paper
+	reqs = list(/obj/item/paper = 20)
+	tools = list(TOOL_WORKBENCH)
+	time = 10
+	category = CAT_CLOTHING
+	subcategory = CAT_MISCCLOTHING	//F13 category
+
+/*
 /datum/crafting_recipe/hudsunsec
 	name = "Security HUDsunglasses"
 	result = /obj/item/clothing/glasses/hud/security/sunglasses
@@ -270,7 +281,7 @@
 				  /obj/item/stack/cable_coil = 5)
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/hudsunsecremoval
 	name = "Security HUD removal"
@@ -280,7 +291,7 @@
 	reqs = list(/obj/item/clothing/glasses/hud/security/sunglasses = 1)
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/hudsunmed
 	name = "Medical HUDsunglasses"
@@ -294,7 +305,7 @@
 				/obj/item/stack/cable_coil = 5)
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/hudsunmedremoval
 	name = "Medical HUD removal"
@@ -304,7 +315,7 @@
 	reqs = list(/obj/item/clothing/glasses/hud/health/sunglasses = 1)
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/beergoggles
 	name = "Beer Goggles"
@@ -316,7 +327,7 @@
 				  /obj/item/stack/cable_coil = 5)
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/beergogglesremoval
 	name = "Beer Goggles removal"
@@ -326,7 +337,7 @@
 	reqs = list(/obj/item/clothing/glasses/sunglasses/reagent = 1)
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/diagnostic_sunglasses
 	name = "Diagnostic HUDsunglasses"
@@ -340,7 +351,7 @@
 				  /obj/item/stack/cable_coil = 5)
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/diagnostic_sunglasses_removal
 	name = "Diagnostic HUDsunglasses removal"
@@ -350,7 +361,7 @@
 	reqs = list(/obj/item/clothing/glasses/hud/diagnostic/sunglasses = 1)
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/ghostsheet
 	name = "Ghost Sheet"
@@ -372,7 +383,7 @@
 				/obj/item/clothing/glasses/eyepatch = 1)
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/secpatch_removal
 	name = "Security HUDpatch Removal"
@@ -382,7 +393,7 @@
 	reqs = list(/obj/item/clothing/glasses/hud/security/sunglasses/eyepatch = 1)
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/medpatch
 	name = "Medical Eyepatch HUD"
@@ -395,7 +406,7 @@
 				/obj/item/clothing/glasses/eyepatch = 1)
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/medpatch_removal
 	name = "Medical HUDpatch Removal"
@@ -405,7 +416,7 @@
 	reqs = list(/obj/item/clothing/glasses/hud/health/eyepatch = 1)
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/diagpatch
 	name = "Diagnostic Eyepatch HUD"
@@ -418,7 +429,7 @@
 				/obj/item/clothing/glasses/eyepatch = 1)
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/diagpatch_removal
 	name = "Diagnostic HUDpatch Removal"
@@ -428,7 +439,7 @@
 	reqs = list(/obj/item/clothing/glasses/hud/diagnostic/eyepatch = 1)
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/mesonpatch
 	name = "Meson Scanner Eyepatch"
@@ -441,7 +452,7 @@
 				/obj/item/clothing/glasses/eyepatch = 1)
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-	always_availible = FALSE
+	always_available = FALSE
 
 /datum/crafting_recipe/mesonpatch_removal
 	name = "Meson Scanner patch Removal"
@@ -451,7 +462,7 @@
 	reqs = list(/obj/item/clothing/glasses/meson/eyepatch = 1)
 	category = CAT_CLOTHING
 	subcategory = CAT_GENCLOTHES
-	always_availible = FALSE
+	always_available = FALSE
 
 	/datum/crafting_recipe/garlic_necklace
 	name = "Garlic Necklace"
