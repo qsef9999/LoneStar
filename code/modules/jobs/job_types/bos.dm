@@ -44,7 +44,6 @@ Main doors: ACCESS_CAPTAIN 20
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/boscombathelmetmk2)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/set_vrboard/bos)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/gate_bos)
-
 /*
 Elder
 */
@@ -315,6 +314,7 @@ Head Knight
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/R93)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/rcw)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/plasmasniper)
 
 
 /datum/outfit/job/bos/f13knightcap
@@ -787,6 +787,7 @@ Senior
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/R93)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/wattz2ke)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/plasmasniper)
 
 /datum/outfit/job/bos/f13seniorknight
 	name = "Senior Knight"
@@ -897,6 +898,7 @@ Knight
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AER9)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/AEP7)
 	H.mind.teach_crafting_recipe(/datum/crafting_recipe/dks)
+	H.mind.teach_crafting_recipe(/datum/crafting_recipe/plasmasniper)
 
 /datum/outfit/job/bos/f13knight
 	name = "Knight"
