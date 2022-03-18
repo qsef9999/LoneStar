@@ -50,6 +50,23 @@
 	REMOVE_TRAIT(H, TRAIT_TRIBAL, "Former Tribal")
 
 
+/datum/quirk/tribespeak
+	name = "Tribal Language Comprehension"
+	desc = "You're somehow capable of understanding and speaking the common tribal languages in the area."
+	value = 1
+	gain_text = "<span class='notice'>You remember the old ways of your tribe..</span>"
+	lose_text = "<span class='notice'>You've forgotten the ways of your ancestors..</span>"
+
+
+/datum/quirk/tribespeak/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.grant_language(/datum/language/tribal)
+
+/datum/quirk/tribespeak/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	H.remove_language(/datum/language/tribal)
+
+
 /datum/quirk/apathetic
 	name = "Apathetic"
 	desc = "You just don't care as much as other people. That's nice to have in a place like this, I guess."
@@ -237,13 +254,13 @@
 	if(quirk_holder)
 		quirk_holder.blood_ratio = 1
 
-/datum/quirk/machine_spirits
-	name = "Spirit Blessed"
-	desc = "You respect the teachings of the Machine Spirits."
-	value = 3
+/datum/quirk/tribal_tech
+	name = "Primitive Tech"
+	desc = "You're able to use primitive technology."
+	value = 2
 	mob_trait = TRAIT_MACHINE_SPIRITS
-	gain_text = "<span class='notice'>You have recieved the blessing of the Machine Spirits.</span>"
-	lose_text = "<span class='danger'>You've lost the  blessing of the Machine Spirits.</span>"
+	gain_text = "<span class='notice'>You are now able to use primitive technology.</span>"
+	lose_text = "<span class='danger'>You are no longer able to use primitive technology.</span>"
 	locked = TRUE
 
 /datum/quirk/night_vision
@@ -258,6 +275,28 @@
 /datum/quirk/night_vision/on_spawn()
 	var/mob/living/carbon/human/H = quirk_holder
 	H.update_sight()
+
+/datum/quirk/nukalover
+	name = "Nuka Fiend"
+	desc = "You are a fan of America's most popular pre-war soft drink. Your body simply loves the sugary drink so much, it rejects healthier alternatives."
+	value = 2
+	mob_trait = TRAIT_NUKA_LOVER
+	gain_text = "<span class='notice'>You want to buy the whole world a nuka-cola!</span>"
+	lose_text = "<span class='danger'>What's the big deal about nuka-cola?</span>"
+	medical_record_text = "Patient has an addiction to the soft drink Nuka-Cola. Somehow, their metabolism has adapted to the sugars and artifical flavorings."
+	
+/datum/quirk/nukalover/add()
+	var/mob/living/carbon/human/H = quirk_holder
+	var/datum/species/species = H.dna.species
+	species.liked_food |= NUKA
+	species.disliked_food |= VEGETABLES
+
+/datum/quirk/nukalover/remove()
+	var/mob/living/carbon/human/H = quirk_holder
+	if(H)
+		var/datum/species/species = H.dna.species
+		species.liked_food = initial(species.liked_food)
+		species.disliked_food = initial(species.disliked_food)
 
 /datum/quirk/trapper
 	name = "Trapper"

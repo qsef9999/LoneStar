@@ -20,6 +20,8 @@
 #define LAZYACCESS(L, I) (L ? (isnum(I) ? (I > 0 && I <= length(L) ? L[I] : null) : L[I]) : null)
 #define LAZYSET(L, K, V) if(!L) { L = list(); } L[K] = V;
 #define LAZYLEN(L) length(L)
+//Sets a list to null
+#define LAZYNULL(L) L = null
 #define LAZYCLEARLIST(L) if(L) L.Cut()
 #define SANITIZE_LIST(L) ( islist(L) ? L : list() )
 #define reverseList(L) reverseRange(L.Copy())
@@ -102,7 +104,7 @@
 	} while(FALSE)
 
 //Returns a list in plain english as a string
-/proc/english_list(list/input, nothing_text = "nothing", and_text = " and ", comma_text = ", ", final_comma_text = "" )
+/proc/english_list(list/input, nothing_text = "nothing", and_text = " and ", comma_text = ", ", final_comma_text = "")
 	var/total = input.len
 	if (!total)
 		return nothing_text
@@ -121,6 +123,34 @@
 			index++
 
 		return "[output][and_text][input[index]]"
+
+/**
+* English_list but associative supporting. Higher overhead.
+*/
+/proc/english_list_assoc(list/input, nothing_text = "nothing", and_text = " and ", comma_text = ", ", final_comma_text = "")
+	var/total = length(input)
+	switch(total)
+		if (0)
+			return "[nothing_text]"
+		if (1)
+			var/assoc = input[input[1]] == null? "" : " = [input[input[1]]]"
+			return "[input[1]][assoc]"
+		if (2)
+			var/assoc = input[input[1]] == null? "" : " = [input[input[1]]]"
+			var/assoc2 = input[input[2]] == null? "" : " = [input[input[2]]]"
+			return "[input[1]][assoc][and_text][input[2]][assoc2]"
+		else
+			var/output = ""
+			var/index = 1
+			var/assoc
+			while (index < total)
+				if (index == total - 1)
+					comma_text = final_comma_text
+				assoc = input[input[index]] == null? "" : " = [input[input[index]]]"
+				output += "[input[index]][assoc][comma_text]"
+				++index
+			assoc = input[input[index]] == null? "" : " = [input[input[index]]]"
+			return "[output][and_text][input[index]]"
 
 //Returns list element or null. Should prevent "index out of bounds" error.
 /proc/listgetindex(list/L, index)

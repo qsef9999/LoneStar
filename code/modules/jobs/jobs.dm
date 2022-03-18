@@ -48,33 +48,15 @@ GLOBAL_LIST_INIT(nonhuman_positions, list(
 	))
 
 GLOBAL_LIST_INIT(command_positions, list(
-	"Elder",
-	"Head Scribe",
 	"Head Paladin",
 	"Head Knight",
 
-	"Enclave Lieutenant",
-
 	"NCR Captain",
-	"NCR Lieutenant",
+	"NCR Veteran Ranger",
 
-	"Legate",
 	"Legion Centurion",
-	"Legion Veteran Decanus",
 
-	"Overseer",
-	"Chief of Security",
-
-	"Mayor",
 	"Sheriff",
-
-	"Chief",
-	"Shaman",
-	"Head Hunter",
-
-	"Followers Administrator",
-
-	"Den Mob Boss",
 	))
 
 GLOBAL_LIST_INIT(silicon_whitelist_positions, list(
@@ -109,14 +91,14 @@ GLOBAL_LIST_INIT(faction_whitelist_positions, list(
 "Legion Slave",
 
 "Mayor",
-"Sheriff",
-"Deputy",
+"Chief",
+"Officer",
 "Shopkeeper",
 "Doctor",
 "Prospector",
 "Detective",
 
-"Chief",
+"Tribal Chief",
 "Shaman",
 "Head Hunter",
 "Druid",
@@ -152,10 +134,10 @@ GLOBAL_LIST_INIT(brotherhood_positions, list(
 GLOBAL_LIST_INIT(oasis_positions, list(
 	"Mayor",
 	"Secretary",
-	"Sheriff",
+	"Chief",
 	"Doctor",
 	"Citizen",
-	"Deputy",
+	"Officer",
 	"Shopkeeper",
 	"Farmer",
 	"Prospector",
@@ -182,7 +164,7 @@ GLOBAL_LIST_INIT(legion_positions, list(
 	"Prime Legionnaire",
 	"Recruit Legionnaire",
 	"Legion Forgemaster",
-	"Legion Slavemaster",
+	"Legion Immune",
 	"Legion Auxilia",
 	"Legion Slave",
 	"Legion Venator",
@@ -249,7 +231,7 @@ GLOBAL_LIST_INIT(silicon_positions, list(
 ))
 
 GLOBAL_LIST_INIT(tribal_positions, list(
-	"Chief",
+	"Tribal Chief",
 	"Shaman",
 	"Head Hunter",
 	"Druid",

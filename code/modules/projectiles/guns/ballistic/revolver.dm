@@ -7,7 +7,7 @@
 	desc = "should not exist."
 	icon_state = "revolver"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder
-	fire_delay = 5	
+	fire_delay = 4.5
 	spread = 1
 	force = 12 // Pistol whip
 	casing_ejector = FALSE
@@ -139,27 +139,10 @@
 	obj_flags = UNIQUE_RENAME
 	var/list/safe_calibers
 
-/////////////////////
-// 10 MM REVOLVERS //
-/////////////////////
-
-//Colt 6520			 							Keywords: 10mm, Double action, 12 rounds cylinder
-/obj/item/gun/ballistic/revolver/colt6520
-	name = "Colt 6520"
-	desc = "The Colt 6520 10mm double action revolver is a highly durable weapon developed by Colt Firearms prior to the Great War. It proved to be resistant to the desert-like conditions of the post-nuclear wasteland and is a fine example of workmanship and quality construction."
-	icon_state = "colt6520"
-	extra_damage = 20
-	extra_penetration = 0.1
-	fire_delay = 4
-	recoil = 0.05
-	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev6520
-	fire_sound = 'sound/f13weapons/10mm_fire_02.ogg'
-
-
-
-///////////////////////
+///////////////////
 // .45 ACP REVOLVERS //
-///////////////////////
+///////////////////
+
 
 //S&W 45						Keywords: .45, Single action, 7 rounds cylinder, Long barrel
 /obj/item/gun/ballistic/revolver/revolver45
@@ -168,8 +151,8 @@
 	item_state = "45revolver"
 	icon_state = "45revolver"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev45
-	extra_damage = 32
-	fire_delay = 6
+	extra_damage = 34
+	fire_delay = 4.5
 	spread = 1
 	fire_sound = 'sound/f13weapons/45revolver.ogg'
 
@@ -186,8 +169,8 @@
 	icon_state = "357colt"
 	item_state = "357colt"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev357
-	extra_damage = 36
-	fire_delay = 6
+	extra_damage = 34
+	fire_delay = 4.5
 	spread = 0
 	fire_sound = 'sound/f13weapons/357magnum.ogg'
 
@@ -199,16 +182,16 @@
 	icon_state = "lucky37"
 	item_state = "lucky"
 	w_class = WEIGHT_CLASS_SMALL
-	extra_damage = 36
-	fire_delay = 4
+	extra_damage = 40
+	fire_delay = 3
 	block_chance = 20
-	
-//Police revolver					Keywords: .357, Double action, 6 rounds cylinder, Pocket Pistol 
+
+//Police revolver					Keywords: .357, Double action, 6 rounds cylinder, Pocket Pistol
 /obj/item/gun/ballistic/revolver/police
 	name = "police revolver"
 	desc = "Pre-war double action police revolver chambered in .357 magnum."
 	icon_state = "police"
-	extra_damage = 34
+	extra_damage = 32
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev357
 	w_class = WEIGHT_CLASS_SMALL
 	spread = 2
@@ -227,7 +210,7 @@
 	item_state = "model29"
 	icon_state = "m29"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
-	extra_damage = 36
+	extra_damage = 38
 	extra_penetration = 0.1
 	recoil = 0.1
 	can_scope = FALSE
@@ -250,9 +233,8 @@
 	desc = "When you don't just need excessive force, but crave it. This .44 has a special hammer mechanism, allowing for measured powerful shots, or fanning for a flurry of inaccurate shots."
 	item_state = "m29peace"
 	icon_state = "m29peace"
-	extra_damage = 40
-	extra_penetration = 0.1
-	fire_delay = 7
+	extra_damage = 45
+	fire_delay = 5
 	burst_size = 1
 	actions_types = list(/datum/action/item_action/toggle_firemode)
 	can_scope = FALSE
@@ -268,7 +250,6 @@
 			burst_size = 3 //fan the hammer
 			spread = 25
 			extra_damage = 30
-			extra_penetration = 0
 			fire_delay = 6
 			weapon_weight = WEAPON_HEAVY //fan the hammer requires two hands
 			to_chat(user, "<span class='notice'>You prepare to fan the hammer for a rapid burst of shots.</span>")
@@ -276,9 +257,8 @@
 			select = 0
 			burst_size = 1
 			spread = 0
-			extra_damage = 40
-			extra_penetration = 0.1
-			fire_delay = 7
+			extra_damage = 45
+			fire_delay = 5
 			weapon_weight = WEAPON_LIGHT
 			to_chat(user, "<span class='notice'>You switch to single-shot fire.</span>")
 	update_icon()
@@ -290,7 +270,7 @@
 	desc = "A snubnose variant of the commonplace .44 magnum. An excellent holdout weapon for self defense."
 	icon_state = "m29_snub"
 	w_class = WEIGHT_CLASS_SMALL
-	extra_damage = 34
+	extra_damage = 36
 	spread = 3
 
 
@@ -301,8 +281,8 @@
 	item_state = "44colt"
 	icon_state = "44colt"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev44
-	fire_delay = 6
-	extra_damage = 36
+	fire_delay = 4.5
+	extra_damage = 40
 	spread = 0
 	fire_sound = 'sound/f13weapons/44revolver.ogg'
 
@@ -313,7 +293,7 @@
 	desc = "I hadn't noticed, but there on his hip, was a really spiffy looking iron..."
 	fire_delay = 4
 	extra_penetration = 0.1
-	extra_damage = 36
+	extra_damage = 40
 
 
 //////////////////////
@@ -328,7 +308,7 @@
 	item_state = "sequoia"
 	weapon_weight = WEAPON_MEDIUM
 	recoil = 0.2
-	extra_damage = 50
+	extra_damage = 45
 	extra_penetration = 0.1
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev4570
 	fire_sound = 'sound/f13weapons/sequoia.ogg'
@@ -359,8 +339,8 @@
 	recoil = 0.1
 	can_scope = TRUE
 	scope_state = "revolver_scope"
-	extra_damage = 50
-	extra_penetration = 0.05 //its not brass hardcast
+	extra_damage = 44
+	extra_penetration = 0.1
 	fire_delay = 5.5
 	scope_x_offset = 9
 	scope_y_offset = 20
@@ -372,16 +352,16 @@
 /////////////////////
 
 
-//Colt Army						Keywords: .45 long colt (bouncing), Single action, 6 rounds cylinder, Spread -1, Fire delay +2
+//Colt Army						Keywords: .45 long colt (bouncing), Single action, 6 rounds cylinder.
 /obj/item/gun/ballistic/revolver/revolver45/gunslinger
 	name = "\improper Colt Single Action Army"
 	desc = "A Colt Single Action Army, chambered in the archaic .45 long colt cartridge."
 	item_state = "coltwalker"
 	icon_state = "peacemaker"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/rev45/gunslinger
-	extra_damage = 35
+	extra_damage = 38
 	extra_penetration = 0.15
-	fire_delay = 8 //This fires MUCH slower then the Sequoia or 357. You're rewarded with bouncing bullets
+	fire_delay = 4.5
 	fire_sound = 'sound/f13weapons/45revolver.ogg'
 	spread = 0 //Your reward for the slower fire rate is less spread anddd
 
@@ -392,8 +372,9 @@
 	desc = "A strange pistol firing rifle ammunition, possibly damaging the users wrist and with poor accuracy."
 	icon_state = "thatgun"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/thatgun
-	extra_damage = 30
-	extra_penetration = 0.1
+	weapon_weight = WEAPON_MEDIUM
+	extra_damage = 33
+	extra_penetration = 0.2
 	spread = 4
 	recoil = 0.5
 	fire_sound = 'sound/f13weapons/magnum_fire.ogg'
@@ -409,6 +390,7 @@
 	name = "Needler pistol"
 	desc = "You suspect this Bringham needler pistol was once used in scientific field studies. It uses small hard-plastic hypodermic darts as ammo. "
 	extra_damage = 21
+	extra_penetration = 0.5
 	icon_state = "needler"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/revneedler
 	fire_sound = 'sound/weapons/gunshot_silenced.ogg'
@@ -416,7 +398,7 @@
 
 /obj/item/gun/ballistic/revolver/needler/ultra
 	name = "Ultracite needler"
-	desc = "An ultracite enhanced needler pistol" //Sounds like lame bethesda stuff to me
+	desc = "An ultracite enhanced needler pistol." //Sounds like lame bethesda stuff to me
 	icon_state = "ultraneedler"
 	mag_type = /obj/item/ammo_box/magazine/internal/cylinder/revneedler
 	fire_sound = 'sound/weapons/gunshot_silenced.ogg'

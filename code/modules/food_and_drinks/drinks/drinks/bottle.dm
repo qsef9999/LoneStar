@@ -7,7 +7,7 @@
 /obj/item/reagent_containers/food/drinks/bottle
 	amount_per_transfer_from_this = 10
 	volume = 100
-	force = 15
+	force = 10
 	throwforce = 15
 	item_state = "broken_beer" //Generic held-item sprite until unique ones are made.
 	lefthand_file = 'icons/mob/inhands/misc/food_lefthand.dmi'
@@ -30,14 +30,14 @@
 
 	var/obj/item/bodypart/affecting = user.zone_selected //Find what the player is aiming at
 
-	var/headarmor = 0 // Target's head armor
+//	var/headarmor = 0   This broke somehow, can't stand constant error message from it.  Same with lines 36 to 40.
 	var/armor_block = min(90, target.run_armor_check(affecting, "melee", null, null,armour_penetration)) // For normal attack damage
 
 	//If they have a hat/helmet and the user is targeting their head.
-	if(affecting == BODY_ZONE_HEAD)
-		var/obj/item/I = target.get_item_by_slot(SLOT_HEAD)
-		if(I)
-			headarmor = I.armor.melee
+//	if(affecting == BODY_ZONE_HEAD)
+//		var/obj/item/I = target.get_item_by_slot(SLOT_HEAD)
+//		if(I)
+//			headarmor = I.armor.melee
 
 	//Calculate the knockdown duration for the target.
 
@@ -139,7 +139,7 @@
 	icon = 'icons/obj/f13vending.dmi'
 	icon_state = "nukacola"
 	list_reagents = list(/datum/reagent/consumable/nuka_cola = 25, /datum/reagent/radium = 5)
-	foodtype = SUGAR
+	foodtype = NUKA
 	isGlass = TRUE
 
 /obj/item/reagent_containers/food/drinks/bottle/f13nukacola/radioactive
@@ -152,7 +152,6 @@
 	icon = 'icons/obj/f13vending.dmi'
 	icon_state = "sunset"
 	list_reagents = list(/datum/reagent/consumable/ethanol/whiskey = 1, /datum/reagent/consumable/sunset = 15, /datum/reagent/medicine/salglu_solution = 5)
-	foodtype = SUGAR
 	isGlass = TRUE
 
 
@@ -693,6 +692,7 @@
 	desc = "You've really hit rock bottom now... yet theres nothing like homebrew nukashine in times like these!"
 	icon_state = "nukashine"
 	list_reagents = list(/datum/reagent/consumable/ethanol/nukashine = 100)
+	foodtype = NUKA
 
 
 // Empty bottles

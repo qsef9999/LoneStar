@@ -16,7 +16,7 @@
 	start_empty = TRUE
 	
 /obj/item/ammo_box/magazine/greasegun
-	name = "Grease gun magazine (.45)"
+	name = "SMG magazine (.45)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "grease"
 	ammo_type = /obj/item/ammo_casing/c45
@@ -53,7 +53,7 @@
 	start_empty = 1
 
 /obj/item/ammo_box/magazine/pps9mm
-	name = "Ppsh magazine (9mm)"
+	name = "PPSh magazine (9mm)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "ppshDrum"
 	ammo_type = /obj/item/ammo_casing/c9mm
@@ -77,7 +77,7 @@
 	start_empty = 1
 
 /obj/item/ammo_box/magazine/tommygunm45
-	name = "drum magazine (.45)"
+	name = "Thompson drum magazine (.45)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "tommydrum"
 	ammo_type = /obj/item/ammo_casing/c45
@@ -85,7 +85,7 @@
 	max_ammo = 50
 
 /obj/item/ammo_box/magazine/tommygunm45/stick
-	name = "drum magazine (.45)"
+	name = "Thompson stick magazine (.45)"
 	icon = 'icons/fallout/objects/guns/ammo.dmi'
 	icon_state = "tommystick"
 	ammo_type = /obj/item/ammo_casing/c45
